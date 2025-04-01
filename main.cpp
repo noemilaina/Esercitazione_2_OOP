@@ -5,7 +5,7 @@ using namespace std;
 
 int main(void)
 {
-	using comp = ComplexNumber<double>>;
+	using comp = ComplexNumber<double>;
 	
 	comp r1(2.3, -4.5);
 	cout << "Visualizza numero: \n" <<r1<< "\n" << endl;
