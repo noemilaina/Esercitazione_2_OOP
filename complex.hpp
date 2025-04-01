@@ -1,5 +1,6 @@
 #pragma once
 #include <ostream>
+#include <iostream>
 
 template <typename F> requires std::floating_point<F>
 class ComplexNumber{
