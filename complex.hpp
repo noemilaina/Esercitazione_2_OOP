@@ -80,6 +80,7 @@ std::ostream& operator<<(std::ostream& os, const ComplexNumber<F>& r){
 		else{
 			os << r.getReal() << "+" << r.getImag() << "i";
 	}
+	}
 	else{
 		os << r.getReal();
 	}
