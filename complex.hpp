@@ -1,4 +1,5 @@
 #pragma once
+#include <ostream>
 
 template <typename F> requires std::floating_point<F>
 class ComplexNumber{
@@ -69,18 +70,17 @@ operator*(const F& f, const ComplexNumber<F>& c) {
 	return c * f;
 } 
 template<typename F>
-std::ostream&
-operator<<(std::ostream& os, const ComplexNumber<F>& r){
+std::ostream& operator<<(std::ostream& os, const ComplexNumber<F>& r){
 	if (r.getImag() != 0){
 		if (r.getImag() < 0){
 			F tmp = -r.getImag();
 			os << r.getReal() << "-" << tmp << "i";
 		}
-		else
+		else{
 			os << r.getReal() << "+" << r.getImag() << "i";
 	}
-	else
+	else{
 		os << r.getReal();
-	
+	}
 	return os;
 }
